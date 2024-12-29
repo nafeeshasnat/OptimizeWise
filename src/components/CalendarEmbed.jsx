@@ -1,23 +1,27 @@
 import Cal from "@calcom/embed-react";
 
-export function CalendarEmbed({ calLink }) {
+export function CalendarEmbed({ calLink, config }) {
+
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full min-h-[600px]">
       <Cal
         calLink={calLink}
         style={{
           width: "100%",
-          height: "auto",
+          height: "100%",
           overflow: "hidden",
           borderRadius: "8px",
-          position: "unset",
-          top: 0,
-          left: 0
+          minHeight: "600px"
         }}
         config={{
           theme: 'light',
           hideEventTypeDetails: false,
-          hideLandingPageDetails: false
+          hideLandingPageDetails: false,
+          name: String(config?.name || ''),
+          email: String(config?.email || ''),
+          Company: String(config?.Company || ''),
+          Website: String(config?.Website || ''),
+          Business: String(config?.Business || '')
         }}
       />
     </div>

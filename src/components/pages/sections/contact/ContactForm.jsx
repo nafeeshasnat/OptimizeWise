@@ -16,6 +16,7 @@ export function ContactForm() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    email: '',
     company: '',
     website: '',
     businessType: ''
@@ -43,6 +44,16 @@ export function ContactForm() {
 
   const handlePrevStep = () => {
     setStep(1);
+  };
+
+  const getCalendarConfig = () => {
+    return {
+      name: `${formData.firstName} ${formData.lastName}`.trim(),
+      email: formData.email,
+      Company: formData.company,
+      Website: formData.website,
+      Business: formData.businessType
+    };
   };
 
   return (
@@ -77,6 +88,18 @@ export function ContactForm() {
                 required
               />
             </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="email">Email</Label>
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
           </div>
 
           <div className="space-y-2">
@@ -132,12 +155,15 @@ export function ContactForm() {
           <div className="space-y-2">
             <h2 className="text-2xl font-bold">Schedule Your Consultation</h2>
             <p className="text-gray-600">
-              Choose a convenient time for your 30-minute consultation (CET timezone).
+              Choose a convenient time for your 30-minute consultation.
             </p>
           </div>
 
-          <div>
-            <CalendarEmbed calLink="nafees-hasnat-s0q6ob" />
+          <div className="min-h-[600px]">
+            <CalendarEmbed
+              calLink="nafees-hasnat-s0q6ob"
+              config={getCalendarConfig()}
+            />
           </div>
 
           <Button
