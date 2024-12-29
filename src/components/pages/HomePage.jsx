@@ -1,4 +1,4 @@
-import { SEOHead } from '@/components/SEOHead';
+import { SEO } from '@/utils/seo.jsx';
 import { ValueProps } from './sections/ValueProps';
 import { RoiCalculator } from './sections/RoiCalculator';
 import { IndustryExpertise } from './sections/IndustryExpertise';
@@ -27,7 +27,7 @@ const structuredData = {
 export function HomePage() {
   return (
     <div className="min-h-screen">
-      <SEOHead
+      <SEO
         title="CRO & A/B Testing Services | Optimize Your Conversion Rate"
         description="Transform your traffic into revenue with data-driven CRO and A/B testing services. Get expert optimization strategies that deliver measurable results and sustainable growth."
         canonicalUrl="https://optimizewise.com"
@@ -48,7 +48,7 @@ export function HomePage() {
         >
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        
+
         <div className="container relative z-10 text-white text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl mx-auto">
             Transform Your Digital Experience with Data-Driven Optimization
