@@ -1,36 +1,21 @@
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Clock, Calendar } from 'lucide-react';
 import { blogPosts } from '@/data/blogPosts';
+import { format } from 'date-fns';
 
-export function LatestInsights() {
-  // Get the 3 most recent blog posts
-  const latestPosts = [...blogPosts]
-    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
-    .slice(0, 3);
+export function BlogGrid() {
+  // Sort posts by date, newest first
+  const sortedPosts = [...blogPosts].sort(
+    (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
+  );
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16">
       <div className="container">
-        <div className="flex justify-between items-end mb-12">
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Latest Insights
-            </h2>
-            <p className="text-xl text-gray-600">
-              Stay ahead with our latest findings and success stories
-            </p>
-          </div>
-          <Link to="/blog">
-            <Button variant="outline" size="lg">
-              View All Posts
-            </Button>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {latestPosts.map((post) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedPosts.map((post) => (
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
@@ -48,17 +33,28 @@ export function LatestInsights() {
                   <div className="flex items-center gap-3 mb-4">
                     <Badge variant="secondary">{post.category}</Badge>
                     <div className="flex items-center text-sm text-gray-500">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {post.readTime}
+                      <Calendar className="h-4 w-4 mr-1" />
+                      {format(new Date(post.publishedAt), 'MMM d, yyyy')}
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[hsl(var(--theme-accent))] transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
-                  <Button variant="link" className="p-0 text-[hsl(var(--theme-accent))]">
-                    Read More →
-                  </Button>
+                  <div className="flex items-center justify-between mt-4">
+                    <div className="flex items-center gap-2">
+                      <img
+                        src={post.author.avatar}
+                        alt={post.author.name}
+                        className="w-8 h-8 rounded-full"
+                      />
+                      <span className="text-sm text-gray-600">{post.author.name}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Clock className="h-4 w-4 mr-1" />
+                      {post.readTime}
+                    </div>
+                  </div>
                 </div>
               </article>
             </Link>

@@ -26,6 +26,7 @@
     --input: 0 0% 89.8%;
     --ring: 221 69% 43%;
     --radius: 0.5rem;
+    --theme-accent: 28 80% 52%;
   }
  
   .dark {
@@ -48,6 +49,7 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 221 69% 43%;
+    --theme-accent: 28 80% 52%;
   }
 }
 
@@ -61,5 +63,49 @@
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Mobile-first typography */
+  h1 {
+    @apply text-2xl md:text-4xl lg:text-5xl font-bold;
+  }
+  
+  h2 {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  }
+  
+  h3 {
+    @apply text-lg md:text-xl font-semibold;
+  }
+  
+  p {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+
+  /* List items */
+  li {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+
+  /* Blog post specific styles */
+  .blog-content {
+    @apply max-w-[100%] mx-auto;
+  }
+
+  .blog-content h2 {
+    @apply text-lg md:text-2xl font-bold mt-6 mb-3;
+  }
+
+  .blog-content p {
+    @apply text-sm md:text-base mb-4 text-gray-600;
+  }
+
+  .blog-content ul, 
+  .blog-content ol {
+    @apply pl-4 md:pl-6 mb-4;
+  }
+
+  .blog-content li {
+    @apply text-sm md:text-base mb-2 text-gray-600;
   }
 }

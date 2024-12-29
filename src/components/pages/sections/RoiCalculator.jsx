@@ -98,7 +98,7 @@ export function RoiCalculator() {
             </div>
 
             <div className="text-center">
-              <Button size="lg" className="bg-[#2ECC71] hover:bg-[#27AE60]">
+              <Button size="lg" className="bg-[hsl(var(--theme-accent))] hover:bg-[hsl(var(--theme-accent))/90] text-white hover:text-[#1E73BE]">
                 Get Detailed Analysis <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>

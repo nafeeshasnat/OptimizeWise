@@ -12,7 +12,7 @@ export function CaseStudiesCTA() {
           <p className="text-xl mb-8">
             Let's discuss how our data-driven approach can help transform your digital experience and drive measurable growth.
           </p>
-          <Button size="lg" className="bg-[#2ECC71] hover:bg-[#27AE60]">
+          <Button size="lg" className="bg-[hsl(var(--theme-accent))] hover:bg-[#ffffff] text-white hover:text-[#1E73BE]">
             Get Started <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>

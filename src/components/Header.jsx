@@ -39,7 +39,7 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Button className="bg-[#2ECC71] hover:bg-[#27AE60] text-white ml-4">
+          <Button className="bg-[hsl(var(--theme-accent))] hover:bg-[hsl(var(--theme-accent))/90] text-white ml-4 hover:text-[#1E73BE]">
             Get a Free Consultation
           </Button>
         </nav>

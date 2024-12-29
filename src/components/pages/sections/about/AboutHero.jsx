@@ -22,7 +22,7 @@ export function AboutHero() {
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-200">
           We're a team of optimization experts passionate about creating exceptional digital experiences that drive measurable results.
         </p>
-        <Button size="lg" className="bg-[#2ECC71] hover:bg-[#27AE60]">
+        <Button size="lg" className="bg-[hsl(var(--theme-accent))] hover:bg-[#ffffff] text-white hover:text-[#1E73BE]">
           Meet Our Team <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
