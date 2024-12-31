@@ -9,13 +9,13 @@ export function IndustryExpertise() {
   const latestCaseStudies = [...caseStudies].reverse().slice(0, 3);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#F8F9FA] to-white">
+    <section className="py-14 md:py-24 bg-gradient-to-b from-[#F8F9FA] to-white">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Trusted Across Industries
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Delivering measurable results through data-driven optimization, regardless of your sector
           </p>
         </div>
@@ -35,7 +35,7 @@ export function IndustryExpertise() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900">{study.category}</h3>
               </div>
-              
+
               <div className="space-y-3">
                 <p className="text-gray-600 line-clamp-2">{study.challenge}</p>
                 <p className="text-[hsl(var(--theme-accent))] font-semibold">{study.results.conversionRate} improvement</p>

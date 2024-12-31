@@ -11,14 +11,14 @@ export function LatestInsights() {
     .slice(0, 3);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-14 md:py-24 bg-white">
       <div className="container">
-        <div className="flex justify-between items-end mb-12">
+        <div className="flex justify-between md:items-end mb-12 flex-col md:flex-row gap-5 md:gap-0">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Latest Insights
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg md:text-xl text-gray-600">
               Stay ahead with our latest findings and success stories
             </p>
           </div>

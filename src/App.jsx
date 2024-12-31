@@ -10,10 +10,17 @@ import { CaseStudiesPage } from '@/components/pages/CaseStudiesPage';
 import { CaseStudyDetailPage } from '@/components/pages/sections/case-studies/CaseStudyDetailPage';
 import { BlogPage } from '@/components/pages/BlogPage';
 import { BlogPostPage } from '@/components/pages/BlogPostPage';
+import { WhyCroPage } from '@/components/pages/WhyCroPage';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { Toaster } from '@/components/ui/sonner';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { ScrollToAnchor } from '@/components/ScrollToAnchor';
+
+// Service Pages
+import { AbTestingPage } from '@/components/pages/services/AbTestingPage';
+import { UserResearchPage } from '@/components/pages/services/UserResearchPage';
+import { AnalyticsSetupPage } from '@/components/pages/services/AnalyticsSetupPage';
+import { TechnicalImplementationPage } from '@/components/pages/services/TechnicalImplementationPage';
 
 function App() {
   return (
@@ -28,12 +35,17 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services/ab-testing" element={<AbTestingPage />} />
+                <Route path="/services/user-research" element={<UserResearchPage />} />
+                <Route path="/services/analytics-setup" element={<AnalyticsSetupPage />} />
+                <Route path="/services/technical-implementation" element={<TechnicalImplementationPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/case-studies" element={<CaseStudiesPage />} />
                 <Route path="/case-studies/:slug" element={<CaseStudyDetailPage />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogPostPage />} />
+                <Route path="/why-cro" element={<WhyCroPage />} />
               </Routes>
             </main>
             <Footer />
