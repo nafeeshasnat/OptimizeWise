@@ -19,9 +19,9 @@ export function AboutPage() {
       <AboutHero />
       <MissionValues />
       <OurStory />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <ApproachSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <VisionSection />
       <AboutCTA />
     </div>

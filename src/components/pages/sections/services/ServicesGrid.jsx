@@ -2,6 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { services } from '@/data/services';
+import { Link } from 'react-router-dom';
 
 export function ServicesGrid() {
   return (
@@ -12,7 +13,7 @@ export function ServicesGrid() {
             Our Services
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive CRO and A/B testing services designed to maximize your 
+            Comprehensive CRO and A/B testing services designed to maximize your
             website's performance and drive sustainable growth.
           </p>
         </div>
@@ -20,7 +21,7 @@ export function ServicesGrid() {
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service) => (
             <Card key={service.title} className="overflow-hidden hover:shadow-lg transition-all">
-              <div className="p-6">
+              <div className="p-6 h-full flex flex-col">
                 {/* Service Header */}
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-[hsl(var(--theme-accent))]/10 flex items-center justify-center">
@@ -59,9 +60,11 @@ export function ServicesGrid() {
                 </div>
 
                 {/* CTA Button */}
-                <Button className="w-full bg-[hsl(var(--theme-accent))] hover:bg-[hsl(var(--theme-accent))]/90 text-white">
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link to={`/services/${service.slug}`} className='mt-[auto]'>
+                  <Button className="w-full bg-[hsl(var(--theme-accent))] hover:bg-[hsl(var(--theme-accent))]/90 text-white">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </Card>
           ))}

@@ -1,6 +1,9 @@
+import { LineChart, ArrowUpRight, Users, ShoppingCart } from 'lucide-react';
+
 export const caseStudies = [
   {
     slug: 'eshopx-checkout-optimization',
+    icon: ShoppingCart,
     month: 'December',
     year: '2024',
     title: 'E-Shop X: Checkout Flow Optimization',
@@ -24,10 +27,20 @@ export const caseStudies = [
       quote: "The team's data-driven approach and attention to detail helped us achieve remarkable improvements in our conversion rates.",
       author: 'Jordan Lee',
       role: 'Head of Marketing, E-Shop X'
-    }
+    },
+    // those are for why CRO pages.
+    improvements: [
+      'Streamlined checkout process from 5 to 3 steps',
+      'Added trust signals and security badges',
+      'Implemented smart default options',
+      'Enhanced mobile experience'
+    ],
+    timeframe: '60 days',
+    roi: '350% ROI'
   },
   {
     slug: 'saasy-engagement-boost',
+    icon: Users,
     month: 'December',
     year: '2024',
     title: 'SaaS Y: User Engagement Enhancement',
@@ -51,10 +64,19 @@ export const caseStudies = [
       quote: "The optimization strategy transformed our user engagement metrics and significantly reduced our churn rate.",
       author: 'Sarah Chen',
       role: 'Product Director, SaaS Y'
-    }
+    },
+    improvements: [
+      'Personalized onboarding flows',
+      'Interactive product tours',
+      'Progress tracking implementation',
+      'Simplified feature discovery'
+    ],
+    timeframe: '90 days',
+    roi: '280% ROI'
   },
   {
     slug: 'retailco-lead-generation',
+    icon: LineChart,
     month: 'December',
     year: '2024',
     title: 'RetailCo: Lead Generation Success',
@@ -78,6 +100,14 @@ export const caseStudies = [
       quote: "The results exceeded our expectations, delivering both quantity and quality in our lead generation efforts.",
       author: 'Michael Ross',
       role: 'Marketing Manager, RetailCo'
-    }
+    },
+    improvements: [
+      'Smart form field reduction',
+      'Multi-step form implementation',
+      'Social proof integration',
+      'Mobile-first redesign'
+    ],
+    timeframe: '45 days',
+    roi: '420% ROI'
   }
 ];

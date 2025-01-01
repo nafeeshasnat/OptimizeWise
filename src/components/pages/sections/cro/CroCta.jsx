@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -18,14 +19,13 @@ export function CroCta() {
               Ready to Transform Your Digital Experience?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Join hundreds of businesses that have achieved exceptional growth through 
-              our data-driven CRO strategies. Get started with a free consultation today.
+              Join us to achieve exceptional growth through our data-driven CRO strategies. Get started with a free consultation.
             </p>
 
             {/* Benefits Grid */}
             <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-12">
               {benefits.map((benefit) => (
-                <div 
+                <div
                   key={benefit}
                   className="flex items-center gap-3 text-left bg-white/10 rounded-lg p-4"
                 >
@@ -37,19 +37,23 @@ export function CroCta() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-[hsl(var(--theme-accent))] hover:bg-white text-white hover:text-[#1E73BE] px-8"
-              >
-                Get Your Free CRO Audit <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white/10"
-              >
-                View Success Stories
-              </Button>
+              <Link to='/contact'>
+                <Button
+                  size="lg"
+                  className="bg-[hsl(var(--theme-accent))] hover:bg-white text-white hover:text-[#1E73BE] px-8"
+                >
+                  Let's Discuss More <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link to='/case-studies'>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-[#1E73BE] hover:bg-white/10 hover:text-white"
+                >
+                  View Success Stories
+                </Button>
+              </Link>
             </div>
           </div>
 

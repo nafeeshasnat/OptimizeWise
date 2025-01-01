@@ -8,7 +8,7 @@ import { faqs } from '@/data/services';
 
 export function ServicesFaq() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-gray-50">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
@@ -25,7 +25,7 @@ export function ServicesFaq() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border rounded-lg px-6"
+                className="border rounded-lg px-6 bg-white"
               >
                 <AccordionTrigger className="text-left hover:text-[hsl(var(--theme-accent))]">
                   {faq.question}

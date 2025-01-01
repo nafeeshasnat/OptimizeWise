@@ -82,7 +82,7 @@ export function Header() {
                 <NavigationMenu>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-sm font-medium transition-colors hover:text-[#1E73BE]"><Link
+                      <NavigationMenuTrigger className="text-sm font-medium transition-colors hover:text-[#1E73BE] bg-transparent hover:!bg-transparent"><Link
                         to={'/services'}
                         className={cn(
                           'text-sm font-medium transition-colors hover:text-[#1E73BE]',

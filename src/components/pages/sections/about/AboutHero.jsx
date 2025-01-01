@@ -14,7 +14,7 @@ export function AboutHero() {
       >
         <div className="absolute inset-0 bg-black/60" />
       </div>
-      
+
       <div className="container relative z-10 text-white text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl mx-auto">
           Driven by Data, Fueled by Innovation
@@ -22,9 +22,6 @@ export function AboutHero() {
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-200">
           We're a team of optimization experts passionate about creating exceptional digital experiences that drive measurable results.
         </p>
-        <Button size="lg" className="bg-[hsl(var(--theme-accent))] hover:bg-[#ffffff] text-white hover:text-[#1E73BE]">
-          Meet Our Team <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { ServiceProcess } from './sections/ServiceProcess';
 import { ServiceBenefits } from './sections/ServiceBenefits';
 import { ServiceCaseStudies } from './sections/ServiceCaseStudies';
 import { ServiceFaq } from './sections/ServiceFaq';
-import { ServiceCta } from './sections/ServiceCta';
+import { ServicesCta } from '../sections/services/ServicesCta';
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -115,7 +115,7 @@ export function UserResearchPage() {
         keywords="user research services, UX research, usability testing, user behavior analysis, customer journey mapping"
         structuredData={structuredData}
       />
-      
+
       <ServiceHero content={content.hero} />
       <ServiceOverview content={content.overview} />
       <ServiceFeatures features={content.features} />
@@ -123,7 +123,7 @@ export function UserResearchPage() {
       <ServiceBenefits />
       <ServiceCaseStudies />
       <ServiceFaq questions={content.faq} />
-      <ServiceCta />
+      <ServicesCta />
     </div>
   );
 }

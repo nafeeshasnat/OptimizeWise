@@ -1,11 +1,12 @@
-import { 
-  LineChart, Users, BarChart, Search, Code, 
+import {
+  LineChart, Users, BarChart, Search, Code,
   PieChart, Zap, Database, Phone, Settings
 } from 'lucide-react';
 
 export const services = [
   {
     icon: LineChart,
+    slug: 'ab-testing',
     title: "A/B Testing",
     description: "Data-driven experimentation to optimize conversion rates and user experience.",
     features: [
@@ -23,6 +24,7 @@ export const services = [
   },
   {
     icon: Users,
+    slug: 'user-research',
     title: "User Research",
     description: "Deep insights into user behavior and preferences to drive optimization decisions.",
     features: [
@@ -40,6 +42,7 @@ export const services = [
   },
   {
     icon: Search,
+    slug: 'analytics-setup',
     title: "Analytics Setup",
     description: "Professional configuration of analytics tools for accurate data collection and insights.",
     features: [
@@ -57,6 +60,7 @@ export const services = [
   },
   {
     icon: Code,
+    slug: 'technical-implementation',
     title: "Technical Implementation",
     description: "Expert implementation of testing tools and tracking solutions.",
     features: [

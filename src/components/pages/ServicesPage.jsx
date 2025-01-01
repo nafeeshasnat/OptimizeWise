@@ -54,14 +54,14 @@ export function ServicesPage() {
         keywords="CRO services, A/B testing services, conversion optimization, website optimization services, increase conversion rates"
         structuredData={structuredData}
       />
-      
+
       <ServicesHero />
       <ServicesIntro />
       <ServicesGrid />
       <ServicesProcess />
       <ServicesResults />
       <ServicesBenefits />
-      <ServicesTestimonials />
+      {/* <ServicesTestimonials /> */}
       <ServicesFaq />
       <ServicesCta />
     </div>

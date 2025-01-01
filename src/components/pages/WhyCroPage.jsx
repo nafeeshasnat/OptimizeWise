@@ -6,11 +6,12 @@ import { CroBenefits } from './sections/cro/CroBenefits';
 import { CroExamples } from './sections/cro/CroExamples';
 import { CroFaq } from './sections/cro/CroFaq';
 import { CroCta } from './sections/cro/CroCta';
+import { ChallengesWOCRO } from './sections/cro/ChallengesWOCRO';
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Why CRO and A/B Testing Are Essential for Business Growth",
+  "headline": "Why Conversion Rate Optimization (CRO) and A/B Testing Are Essential for Business Growth",
   "description": "Learn how Conversion Rate Optimization (CRO) and A/B testing can transform your digital presence and drive sustainable business growth.",
   "image": "https://optimizewise.com/images/cro-process-infographic.jpg",
   "author": {
@@ -33,7 +34,7 @@ export function WhyCroPage() {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Why CRO & A/B Testing Matter | Complete Guide to Growth"
+        title="Why Conversion Rate Optimization (CRO) & A/B Testing Matter | Complete Guide to Growth"
         description="Discover how Conversion Rate Optimization and A/B testing can transform your business. Learn proven strategies, real examples, and measurable results."
         canonicalUrl="https://optimizewise.com/why-cro"
         ogImage="https://optimizewise.com/images/cro-guide-og.jpg"
@@ -41,10 +42,11 @@ export function WhyCroPage() {
         structuredData={structuredData}
         article={true}
       />
-      
+
       <CroHero />
       <CroOverview />
       <CroProcess />
+      <ChallengesWOCRO />
       <CroBenefits />
       <CroExamples />
       <CroFaq />

@@ -3,23 +3,23 @@ import { Target, Users, Shield, Lightbulb } from 'lucide-react';
 const values = [
   {
     icon: Target,
-    title: "Data-Driven Decisions",
-    description: "Every recommendation and strategy is backed by comprehensive research, analytics, and testing."
+    title: "Data-Driven Leadership",
+    description: "With every strategy rooted in analytics and research, we deliver solutions backed by proven data and decades of combined expertise."
   },
   {
     icon: Users,
-    title: "Customer-Centric",
-    description: "We prioritize understanding user needs to create meaningful, impactful experiences."
+    title: "Customer-Centric Excellence",
+    description: "Your success is our priority. By understanding your unique challenges and goals, we craft impactful user experiences that drive results."
   },
   {
     icon: Shield,
     title: "Integrity & Transparency",
-    description: "Clear communication, realistic expectations, and honest reporting build lasting partnerships."
+    description: "We believe in clear communication, setting realistic expectations, and delivering measurable results with honesty and trust."
   },
   {
     icon: Lightbulb,
-    title: "Continuous Innovation",
-    description: "We constantly evolve our methods, embrace feedback, and push boundaries to deliver better results."
+    title: "Innovative Experimentation",
+    description: "With a passion for innovation, we constantly refine our methods to push boundaries and achieve exceptional outcomes."
   }
 ];
 
@@ -28,9 +28,9 @@ export function MissionValues() {
     <section className="py-24 bg-white">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold mb-6">Our Mission & Values</h2>
+          <h2 className="text-3xl font-bold mb-6">Our Mission, Values, and Expertise</h2>
           <p className="text-lg text-gray-600">
-            We exist to empower businesses with data-driven insights and innovative experimentation, 
+            We exist to empower businesses with data-driven A/B testing and CRO expertise,
             delivering sustainable growth through exceptional digital experiences.
           </p>
         </div>
